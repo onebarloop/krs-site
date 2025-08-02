@@ -1,0 +1,16 @@
+---
+const { title, href, class: className } = Astro.props;
+import BorderBox from "./BorderBox.astro";
+---
+
+<li>
+  <a
+    class={` hover:bg-foreground p-2 block ${className} group transition-colors duration-100`}
+    href={href}
+  >
+    <BorderBox
+      class="group-hover:bg-foreground-accent transition-colors duration-500 p-2 border-2 group-hover:border-foreground-accent rounded"
+      >{title}</BorderBox
+    >
+  </a>
+</li>

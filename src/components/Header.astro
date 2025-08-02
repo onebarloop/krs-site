@@ -1,0 +1,20 @@
+---
+import NavItem from "./NavItem.astro";
+import BorderBox from "./BorderBox.astro";
+---
+
+<div class="border-b border-t border-border">
+  <nav class="container mx-auto">
+    <ul class="flex border-l border-r border-border">
+
+      <NavItem class="" title="Home" href="/" />
+      <NavItem
+        class="border-l border-r border-border"
+        title="About"
+        href="/about"
+      />
+      <NavItem class="border-r border-border" title="Contact" href="/contact" />
+
+    </ul>
+  </nav>
+</div>

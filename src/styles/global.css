@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+    --color-foreground: var(--color-rose-100);
+    --color-foreground-muted: var(--color-rose-200);
+    --color-foreground-accent: var(--color-rose-400);
+    --color-background: var(--color-stone-950);
+    --color-background-muted: var(--color-stone-900);
+    --color-background-accent: var(--color-stone-800);
+    --color-border: var(--color-rose-300);
+
+    --animate-turn: turn 0.5s ease-in-out both;
+    --animate-turn-reverse: turn  0.5s ease-in-out both reverse;
+
+
+    @keyframes turn {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(45deg);
+        }
+    }
+}

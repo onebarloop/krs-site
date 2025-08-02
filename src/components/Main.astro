@@ -1,0 +1,13 @@
+---
+import BorderBox from "./BorderBox.astro";
+---
+
+<main class="grow min-h-0 ">
+    <BorderBox class="container mx-auto border-y-0 p-2 ">
+    <BorderBox class="p-2 border-4 rounded">
+      <BorderBox class="overflow-y-auto">
+        <slot />
+      </BorderBox>
+    </BorderBox>
+  </BorderBox>
+</main>
