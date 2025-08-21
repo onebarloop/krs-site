@@ -13,6 +13,10 @@
     --animate-turn-reverse: turn  0.5s ease-in-out both reverse;
 
 
+    --font-oswald: 'Oswald Variable', sans-serif;
+    --font-ubuntu-mono: 'Ubuntu Mono', monospace;
+
+
     @keyframes turn {
         from {
             transform: rotate(0deg);
