@@ -1,7 +1,8 @@
 ---
 import BorderBox from "../components/BorderBox.astro";
 import HomeLayout from "../layouts/HomeLayout.astro";
-const array = [...Array(10).keys()];
+const array = [...Array(5).keys()];
+const array2 = [...Array(5).keys()];
 import image from "../images/krs.jpg";
 import { Image } from "astro:assets";
 import image2 from "../images/2.avif";
@@ -20,57 +21,49 @@ import image2 from "../images/2.avif";
         nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
         sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
         rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-        est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in
-        hendrerit in vulputate velit esse molestie consequat, vel illum dolore
-        eu feugiat nulla facilisis at vero eros et accumsan et iusto odio
-        dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
-        te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
-        nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
-        ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
-        vulputate velit esse molestie consequat, vel illum dolore eu feugiat
-        nulla facilisis at vero eros et accumsan et iusto odio dignissim qui
-        blandit praesent luptatum zzril delenit augue duis dolore te feugait
-        nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue
-        nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem
-        ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-        nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut
-        wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-        suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem
-        vel eum iriure dolor in hendrerit in vulputate velit esse molestie
-        consequat, vel illum dolore eu feugiat nulla facilisis. At vero eos et
-        accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-        sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor
-        sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-        vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-        gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-        ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam
-        diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et
-        invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum.
-        sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit
-        amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+        <br />
+        <br />
+        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+        sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
+        dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate
+        velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis
+        at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+        zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor
+        sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+        ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+        quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+        ex
       </p>
     </div>
-    <div class="grid grid-cols-2 pt-4 pb-32 w-120 h-fit mx-auto">
-      {
-        array.map((i) => (
-          <div class="size-60 flex items-center justify-center relative">
-            <BorderBox
-              class={`absolute overflow-hidden size-36! rotate-45 ${i % 2 !== 0 ? "-left-2" : "-bottom-18 -right-2"}`}
-            >
-              <div class="size-52 absolute -inset-8 border-2 border-red-500 -rotate-45 flex items-center">
-                <Image src={image} alt={`Image ${i}`} />
-              </div>
+    <div class="grid grid-cols-2 p-20 w-86">
+      <div class="flex flex-col gap-15">
+        {
+          array.map((i) => (
+            <BorderBox class="size-30! flex items-center justify-center relative rotate-45">
+              <Image
+                src={image}
+                alt={`Image ${i}`}
+                class="w-full h-full object-fill"
+              />
             </BorderBox>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
+      <div class="flex flex-col gap-15 mt-[90px]">
+        {
+          array.map((i) => (
+            <BorderBox class="size-30! flex items-center justify-center relative rotate-45">
+              <Image
+                src={image}
+                alt={`Image ${i}`}
+                class="w-full h-full object-fill"
+              />
+            </BorderBox>
+          ))
+        }
+      </div>
     </div>
   </div>
 </HomeLayout>
